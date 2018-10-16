@@ -8,4 +8,9 @@
 
 class JrttPipeline(object):
     def process_item(self, item, spider):
-        return item
+        with open('1.json','a+') as f:
+            f.write(str(item['data']) + '\n')
+        # pass
+
+
+
